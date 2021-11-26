@@ -1,0 +1,133 @@
+body{
+background-image: url("natur2.jpg.jpg");
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+   font-family: sans-serif;
+
+}
+
+i,svg{
+    pointer-events: none;
+}
+
+.kick-pad,.snare-pad,.hihat-pad{
+    width: 5rem;
+    height: 5rem;
+    margin: 1rem 0.5rem;
+    cursor: pointer;
+}
+
+.kick-pad{
+    background: blueviolet;
+
+}
+.snare-pad{
+    background: rgb(73, 206, 12);
+}
+.hihat-pad{
+    background: brown;
+}
+
+.sequence{
+    display: flex;
+    min-height: 10vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hihat-track,.kick-track,.snare-track{
+    display: flex;
+    align-items: center;
+    width: 70%;
+    justify-content: space-between;
+    margin-top: 5rem;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+    margin: 0rem 2rem;
+}
+
+.controls button{
+    padding: 1rem;
+    border: none;
+    background: rebeccapurple;
+    color: white;
+    cursor: pointer;
+    transition: all 0.5 ease;
+}
+
+.pad {
+    transition: all 0.5 ease;
+}
+
+.kick-pad.active{
+    background: rgb(243, 20, 224);
+}
+.snare-pad.active{
+    background: rgb(12, 216, 114);
+}
+.hihat-pad.active{
+    background: rgb(25, 121, 206);
+}
+
+.play{
+    padding: 1rem 2rem;
+    font-size: 0.9rem;
+    background: rgb(21, 192, 112);
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 3rem;
+}
+
+select{
+    padding: 1rem;
+    font-size: 1rem;
+   
+}
+
+.tempo{
+    margin: 0.3rem;
+    width: 30%;
+}
+.tempo-slider {
+    padding: 0.2rem;
+    -webkit-appearance: none;
+    margin: 1rem 0rem;
+    width: 100%;
+    position: relative;
+    background: rgb(70, 24, 24);
+    cursor: pointer;
+    border-radius: 1rem;
+}
+
+.tempo p{
+    font-size: 1rem;
+    margin: 2rem;
+    text-align: center;
+}
+
+.mute.active{
+    background: brown;
+}
+
+@keyframes playTrack{
+    from{
+
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.2);
+    }
+}
